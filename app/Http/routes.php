@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//Route::resource('user', 'UserController');
+
+Route::resource('users', 'UserController');
+
+Route::post('users-post', 'UserController@store');
+
+Route::get('dashboard', function () {
+    return view('index');
 });
